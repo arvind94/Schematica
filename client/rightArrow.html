@@ -1,0 +1,23 @@
+<template name="rightArrow">
+	<div id="{{_id}}" style="position:absolute;left:{{left}};top:{{top}};width:200px;" class="btn btn-primary arrow right button">
+		<a class="close" data-dismiss="modal">X</a>
+		<div class="modal-body">
+			<span class="label label-success addfield">Fields </span>
+			<ul class="nav nav-pills nav-stacked">
+			{{#each dbfields}}
+				{{>dbfield}}
+			{{/each}}
+			</ul>
+		</div>
+		<div id="myDiv" style="display:none">
+			<form id="myForm">
+    			<input type="text" value="" id="startingAd" name="startingAd" placeholder="Starting Ad">
+    			<input type="text" value="" id="endingAd" name="endingAd" placeholder="Ending Ad">
+    			<input type="text" value="" id="rule1" name="rule1" placeholder="Rule 1">
+    			<button type="submit" value="Submit">Submit</button>
+				<button type="reset" value="Reset">Reset</button>
+		    	<a class="btn btn-danger moreRules" href="#">Add Rules</a>
+			</form>
+		</div>
+	</div>
+</template>

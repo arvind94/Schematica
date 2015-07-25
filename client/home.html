@@ -1,0 +1,20 @@
+<template name="home">
+	{{>navigation}}
+	<div class="container-fluid schema">
+		{{#each positions}}
+			{{>position}}
+		{{/each}}
+			{{#each rightArrowType}}
+				{{>rightArrow}}
+			{{/each}}	
+			{{#each leftArrowType}}
+				{{>leftArrow}}
+			{{/each}}
+			{{#each upArrowType}}
+				{{>upArrow}}
+			{{/each}}
+			{{#each downArrowType}}
+				{{>downArrow}}
+			{{/each}}
+	</div>	
+</template>
